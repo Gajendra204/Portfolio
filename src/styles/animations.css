@@ -1,0 +1,18 @@
+/* Logo animation */
+.logo-animate {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px hsl(var(--primary));
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px hsl(var(--primary));
+  }
+}
+
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
