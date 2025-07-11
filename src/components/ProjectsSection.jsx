@@ -3,32 +3,49 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "Job Portal Application",
+    description:
+      "A full-stack job portal for students to search/apply for jobs and recruiters to manage listings with real-time application tracking.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: [
+      "React",
+      "Vite",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+    demoUrl: "https://job-finder-seven-beta.vercel.app/",
+    githubUrl: "https://github.com/Gajendra204/Job-finder",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "HomeScheduler – Smart Appliance Management App", 
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "A full-stack appliance scheduler with secure authentication, enabling users to track maintenance and warranty expirations effortlessly",
+    image: "/projects/project2.jpg",
+    tags: ["Flutter", "Node.js", "Express.js", "MongoDB", "Nodemailer"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Gajendra204/HomeShedular-flutter",
   },
   {
     id: 3,
-    title: "A Movie App",
+    title: "Universal File Converter",
     description:
-      "Full-featured A Movie App with user authentication and trending movies section.",
+      "A full-stack application that enables users to convert various types of files including documents, videos, and audio files.",
     image: "/projects/project3.png",
-    tags: ["React Native", "Appwrite"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+    ],
+    demoUrl: "https://icanconvert.vercel.app/",
+    githubUrl: "https://github.com/Gajendra204/Converter-app",
   },
 ];
 
@@ -50,7 +67,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -60,10 +77,12 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -73,7 +92,7 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
+                <div className="mt-auto flex justify-between items-center">
                   <div className="flex space-x-3">
                     <a
                       href={project.demoUrl}
@@ -100,7 +119,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/Gajendra204"
           >
             Check My Github <ArrowRight size={16} />
           </a>
